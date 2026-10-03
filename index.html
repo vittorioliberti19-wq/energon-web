@@ -58,6 +58,7 @@
     .catalog h2, .catalog h2 em, .catalog h3, .catalog p, .catalog .section-kicker, .catalog .card-index, .catalog a { color:#fff; text-shadow:0 1px 5px #000, 0 2px 12px rgba(0,0,0,.8); }
     .catalog-card { background:transparent; }
     @media (max-width:650px), (prefers-reduced-motion:reduce) { .catalog-video { display:none; } }
+    .flame-video { animation:none; filter:none; width:100%; max-width:520px; height:auto; object-fit:contain; }
   </style>
 </head>
 <body>
@@ -91,7 +92,7 @@
       <div class="flame-stage" aria-label="Símbolo de Energon animado">
         <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
         <div class="flame-halo"></div>
-        <img class="brand-flame" src="assets/energon-flame.svg" alt="Llama azul oficial de Energon" />
+        <video class="brand-flame flame-video" autoplay muted loop playsinline aria-label="Llama azul oficial de Energon animada"><source src="assets/energon-flame-animated.webm" type="video/webm" /></video>
         <div class="flame-caption"><span class="caption-mark"></span><span>ENERGON<br /><small>ENERGÍA EN MOVIMIENTO</small></span></div>
         <span class="stage-coordinate">PROCURA · VENEZUELA</span>
       </div>
