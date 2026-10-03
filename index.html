@@ -51,14 +51,14 @@
     @keyframes brand-scroll { to { transform: translateX(-50%); } }
     @media (prefers-reduced-motion: reduce) { .brand-track { animation: none; width: auto; } .brand-set { flex-wrap: wrap; gap: 20px; padding: 0; } .brand-set[aria-hidden] { display:none; } }
 
-    .hero { background: #071426; }
+    .hero { background: #071426 url("assets/energon-procurement-poster.jpg") center / cover no-repeat; }
     .catalog { position: relative; isolation: isolate; overflow: hidden; background: #071426 url("assets/energon-hero-poster.jpg?v=2") center / cover no-repeat; }
     .catalog-video { position: absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-1; opacity:1; }
     .catalog-top, .catalog-grid { position:relative; z-index:1; }
     .catalog h2, .catalog h2 em, .catalog h3, .catalog p, .catalog .section-kicker, .catalog .card-index, .catalog a { color:#fff; text-shadow:0 1px 5px #000, 0 2px 12px rgba(0,0,0,.8); }
     .catalog-card { background:transparent; }
     @media (max-width:650px), (prefers-reduced-motion:reduce) { .catalog-video { display:none; } }
-    .flame-video { animation:none; filter:none; width:100%; max-width:520px; height:auto; object-fit:contain; }
+    .flame-video { transform:scale(1.5); animation:none; filter:none; width:100%; max-width:520px; height:auto; object-fit:contain; }
   </style>
 </head>
 <body>
@@ -76,6 +76,7 @@
 
   <main id="contenido">
     <section class="hero" id="inicio">
+      <video class="hero-video" data-background-video aria-hidden="true" autoplay muted loop playsinline preload="none" poster="assets/energon-procurement-poster.jpg" data-webm="assets/energon-procurement.webm" data-mp4="assets/energon-procurement.mp4"></video>
 
       <div class="hero-video-mask" aria-hidden="true"></div>
       <div class="hero-grid" aria-hidden="true"></div>
