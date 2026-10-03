@@ -50,6 +50,14 @@
     .brand-marquee:hover .brand-track { animation-play-state: paused; }
     @keyframes brand-scroll { to { transform: translateX(-50%); } }
     @media (prefers-reduced-motion: reduce) { .brand-track { animation: none; width: auto; } .brand-set { flex-wrap: wrap; gap: 20px; padding: 0; } .brand-set[aria-hidden] { display:none; } }
+
+    .hero { background: #071426; }
+    .catalog { position: relative; isolation: isolate; overflow: hidden; background: #071426 url("assets/energon-hero-poster.jpg?v=2") center / cover no-repeat; }
+    .catalog-video { position: absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-1; opacity:1; }
+    .catalog-top, .catalog-grid { position:relative; z-index:1; }
+    .catalog h2, .catalog h2 em, .catalog h3, .catalog p, .catalog .section-kicker, .catalog .card-index, .catalog a { color:#fff; text-shadow:0 1px 5px #000, 0 2px 12px rgba(0,0,0,.8); }
+    .catalog-card { background:transparent; }
+    @media (max-width:650px), (prefers-reduced-motion:reduce) { .catalog-video { display:none; } }
   </style>
 </head>
 <body>
@@ -67,7 +75,7 @@
 
   <main id="contenido">
     <section class="hero" id="inicio">
-      <video class="hero-video" data-background-video aria-hidden="true" autoplay muted loop playsinline preload="none" poster="assets/energon-hero-poster.jpg?v=2" data-webm="assets/energon-hero.webm?v=2" data-mp4="assets/energon-hero.mp4?v=2"></video>
+
       <div class="hero-video-mask" aria-hidden="true"></div>
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="hero-content">
@@ -143,6 +151,7 @@
     </section>
 
     <section class="catalog section-pad" id="suministros">
+      <video class="catalog-video" data-background-video aria-hidden="true" autoplay muted loop playsinline preload="none" poster="assets/energon-hero-poster.jpg?v=2" data-webm="assets/energon-hero.webm?v=2" data-mp4="assets/energon-hero.mp4?v=2"></video>
       <div class="catalog-top"><div><div class="section-kicker light"><span>02</span> / ÁREAS DE SUMINISTRO</div><h2>Componentes para<br /><em>operaciones críticas.</em></h2></div><p>Portafolio enfocado en equipos y materiales para petróleo, energía, industria y entorno marino.</p></div>
       <div class="catalog-grid">
         <article class="catalog-card"><span class="card-index">01</span><div class="line-icon"><svg viewBox="0 0 48 48"><path d="M7 24h10m14 0h10M17 14h14v20H17zM20 10h8m-8 28h8M24 14v20"/></svg></div><h3>Control de flujo</h3><p>Válvulas y componentes asociados</p></article>
