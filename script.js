@@ -55,3 +55,19 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
   }), { threshold: 0.14 });
   revealItems.forEach(item => observer.observe(item));
 } else revealItems.forEach(item => item.classList.add('is-visible'));
+
+const flameVideo = document.querySelector('.flame-video');
+if (flameVideo) {
+  flameVideo.muted = true;
+  const playFlame = () => {
+    if (reducedMotion.matches) flameVideo.pause();
+    else flameVideo.play().catch(() => {});
+  };
+  flameVideo.addEventListener('loadeddata', playFlame);
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) flameVideo.pause();
+    else playFlame();
+  });
+  reducedMotion.addEventListener('change', playFlame);
+  playFlame();
+}
