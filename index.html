@@ -72,6 +72,7 @@
       <a href="#metodo">Método</a>
     </nav>
     <a class="header-cta" href="#contacto">Hablemos</a>
+    <select id="language-switcher" aria-label="Idioma"><option value="es">ES</option><option value="en">EN</option><option value="fr">FR</option><option value="it">IT</option></select>
     <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
   </header>
 
@@ -197,10 +198,21 @@
     <section class="contact section-pad" id="contacto">
       <video class="contact-video" data-background-video aria-hidden="true" autoplay muted loop playsinline preload="none" poster="assets/energon-contact-logo-poster.jpg" data-mp4="assets/energon-contact-logo.mp4"></video>
       <div class="contact-copy"><div class="section-kicker light"><span>04</span> / CONTACTO</div><h2>Conversemos sobre<br /><em>tu próximo requerimiento.</em></h2><p>Comparte el tipo de suministro y el contexto de tu operación. El correo corporativo previsto es procura@energonsol.com. Su activación puede estar pendiente.</p></div>
-      <a class="contact-action" href="mailto:procura@energonsol.com?subject=Consulta%20de%20procura%20Energon" aria-label="Preparar correo de consulta para Energon">Prepara tu consulta<small>procura@energonsol.com · canal previsto</small></a>
+      <form id="contact-form" class="contact-form" action="https://formsubmit.co/procura@energonsol.com" method="POST">
+        <input type="hidden" name="_subject" value="Nueva consulta de procura · Energon Solutions" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="true" />
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="form-honey" aria-hidden="true" />
+        <div class="form-row"><label><span data-i18n="form.name">Nombre</span><input name="name" autocomplete="name" maxlength="120" required /></label><label><span data-i18n="form.company">Empresa</span><input name="company" autocomplete="organization" maxlength="160" /></label></div>
+        <label><span data-i18n="form.email">Correo electrónico</span><input type="email" name="email" autocomplete="email" maxlength="254" required /></label>
+        <label><span data-i18n="form.message">¿Qué necesitas suministrar?</span><textarea name="message" rows="4" maxlength="5000" required></textarea></label>
+        <p class="form-privacy" data-i18n="form.privacy">Usaremos tus datos para responder tu consulta. El envío se procesa con FormSubmit y se entrega a procura@energonsol.com.</p>
+        <button type="submit" class="button button-primary" data-i18n="form.send">Enviar consulta</button>
+      </form>
     </section>
   </main>
   <footer class="site-footer"><a class="footer-brand" href="#inicio"><img src="assets/energon.png" alt="Energon Solutions" /></a><span>Procura para petróleo, energía e industria.</span><span class="footer-right">© Energon Solutions <a href="#inicio">Volver arriba</a></span></footer>
   <script src="script.js?v=flame2"></script>
+  <script src="i18n.js?v=1"></script>
 </body>
 </html>
